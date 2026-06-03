@@ -1,19 +1,15 @@
 {
-    "build": {
-      "env": {
-        "GO_BUILD_FLAGS": "-ldflags '-s -w'"
-      }
-    },
-
-    "routes": [
-        {
-          "src": "/bot/.*",
-          "dest": "/api/bot.go"
-        },
-        {
-          "src": "/",
-          "dest": "/index.html"
-        }
-      ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.go",
+      "use": "@vercel/go"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/bot/(.*)",
+      "dest": "/api/bot.go"
+    }
+  ]
 }
-  
