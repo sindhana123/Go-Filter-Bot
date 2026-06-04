@@ -64,3 +64,4 @@ func Bot(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(statusCodeSuccess)
 }
+
